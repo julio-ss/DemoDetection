@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -13,7 +13,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Image Classify"
+        android:text="Classificação de imagens"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -21,33 +21,58 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/clique_aqui" />
 
     <Button
         android:id="@+id/selectBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select image" />
+        android:backgroundTint="#288CC0"
+        android:drawableLeft="@drawable/gallery"
+        android:paddingLeft="30dp"
+        android:text="Selecionar imagem"
+        android:textAlignment="viewStart"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/captureBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Capture" />
+        android:backgroundTint="#288CC0"
+        android:drawableLeft="@drawable/camera"
+        android:paddingLeft="30dp"
+        android:text="Capturar imagem"
+        android:textAlignment="viewStart"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/predictBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Predict" />
+        android:backgroundTint="#288CC0"
+        android:drawableLeft="@drawable/scan"
+        android:paddingLeft="30dp"
+        android:text="Verificar"
+        android:textAlignment="viewStart"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultado:"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Result:"
         android:textAlignment="viewStart"
         android:textSize="20sp"
         android:textStyle="bold" />
+
 </LinearLayout>
